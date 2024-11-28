@@ -4,6 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <form novalidate>
+      <div>
+        <label for="email">E-Mail:</label>
+        <input type="email" name="email" id="email" required />
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="country">Country:</label>
+        <select name="country" id="country" required>
+          <option value="" disabled selected></option>
+          <option value="de">Germany</option>
+          <option value="at">Austria</option>
+        </select>
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="zip">Zip-Code:</label>
+        <input type="text" name="" id="zip" required />
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="passwordConfirmation">Password Confirmation:</label>
+        <input
+          type="password"
+          name="passwordConfirmation"
+          id="passwordConfirmation"
+          required
+        />
+        <span class="error"></span>
+      </div>
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+    <div class="success"></div>
+  </body>
 </html>

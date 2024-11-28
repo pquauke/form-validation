@@ -1,0 +1,88 @@
+:root {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  --gap: 0.5rem;
+
+  --black010: rgba(0, 0, 0, 0.1);
+  --black050: rgba(0, 0, 0, 0.5);
+  --shadow: 0 0 0.5rem var(--black050);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  outline: none;
+
+  font-size: 1rem;
+  line-height: 1.5;
+
+  /* border: 1px solid red; */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  margin-top: 5rem;
+}
+
+form {
+  border: 1px solid var(--black050);
+  padding: 2rem 0;
+  border-radius: 1rem;
+
+  > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--gap);
+
+    > * {
+      margin: var(--gap) 0;
+      background-color: white;
+    }
+
+    > label {
+      grid-column: 1/2;
+      text-align: end;
+    }
+
+    > input,
+    > select {
+      grid-column: 2/3;
+      border-radius: 1rem;
+      border: 1px solid var(--black050);
+      padding: 0 0.5rem;
+    }
+
+    > .error {
+      grid-column: 3/3;
+      height: 21px;
+    }
+    > input[type='submit'] {
+      background-color: var(--black010);
+      border: 1px solid var(--black050);
+      cursor: pointer;
+    }
+  }
+}
+
+.success {
+  position: absolute;
+  > span {
+    font-size: 15rem;
+  }
+}
+
+.valid {
+  border-color: green;
+}
+.invalid {
+  border-color: red;
+}
